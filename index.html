@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Real estate company</title>
+</head>
+<body>
+    <header>
+     <nav class="navbar">
+            <ul class="nav-links">
+                <!-- Left side navigation items -->
+                <div class="nav-left">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                </div>
+                
+                <!-- Centered logo -->
+                <div class="logo">LUXE DOMINION</div>
+                
+                <!-- Right side navigation items -->
+                <div class="nav-right">
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#Register">Register</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </div>
+            </ul>
+        </nav>   
+    </header>
+    <section class="hero" id="container">
+        <div id="hero-content">
+            <p id="hero-h">
+                THE ADDRESS OF DISTINCTION.
+            </p>
+            <p>
+             Connect with the most powerful agents for your next
+                     luxury home.
+            </p>
+            <div class="btn-container">
+                <a href="#Home" class="btn">Get started</a>
+            </div>
+        </div>
+</section>
+ <section class="flex-section first">
+        <div class="flex-item aboutus">
+            <p class="aboutus-intro">HOW WE WORK</p>
+            <h3>AT LUXE<br> DOMINION</h3>
+            <p>we are more than just real estate agents.We are your trusted partners in finding the perfect property,whether you're buying, selling, or investing.</p>
+            <div class="btn-container">
+                <a href="#Contact" class="btn">Find an agent</a>
+            </div>
+        </div>
+        <div class="flex-item first-img">
+            <img src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Picture of a business man with his computer">
+        </div>
+    </section> 
+ <section id="services">
+    <div id="section-title">
+        <h2>The art of fine living.</h2>
+        <p>
+            Find your rental, sale and commercial properties here!
+        </p>
+ </div>
+ <div class="info-grid">
+ <div class="info-card">
+    <h3>RESIDENTIAL SALES</h3>
+    <p>Looking to buy or sell a home? Our expert agents specialize in helping you navigate the market with confidence.
+       Whether it’s your first home, dream house, or investment property."From cozy starter homes to luxury estates, we find the perfect fit for your lifestyle."
+    </p>
+    <div class="btn-container">
+        <a href="#Home" class="btn">Learn more</a>
+    </div>
+ </div>
+ <div class="info-card">
+    <h3>RENTAL HOUSES</h3>
+    <p> Need a place to rent or looking to lease out your property? We make renting simple and profitable
+        "Whether you're a tenant or landlord, we ensure a hassle-free rental experience."
+    </p>
+    <div class="btn-container">
+        <a href="#Home" class="btn">Learn more</a>
+    </div>
+ </div>
+ <div class="info-card">
+    <h3>COMMERCIAL SALES</h3>
+    <p>For businesses & investors, we offer expert commercial real estate services.
+        "We help businesses find the ideal location to grow and thrive."
+    </p>
+ <div class="btn-container">
+    <a href="#Home" class="btn">Learn more</a>
+ </div>
+</div>
+</section>
+<section class="testimonials" aria-labelledby="testimonials-heading">
+    <div class="testimonials-container">
+        <!-- Title Section -->
+        <div class="testimonials-header">
+            <h2 id="testimonials-heading">What our clients are saying</h2>
+            <p class="subtitle">These are some of the positive experiences from our clients</p>
+        </div>
+        
+
+        <div class="testimonial-slider-container">
+            <div class="testimonial-slider">
+                <div class="testimonial-slide" role="group" aria-label="Testimonial 1: Jessica and Mark">
+                    <blockquote class="testimonial-quote">
+                        <div class="testimonial-info">
+                            <h3>Jessica,23</h3>
+                            <p>"As a first-time homebuyer, i was nervous, but Luxe dominion made the process so smooth. They found us the perfect home under budget and negotiated an amazing deal. Highly recommend!"</p>
+                        </div>
+                    </blockquote>
+                </div>
+            
+                <div class="testimonial-slide" role="group" aria-label="Testimonial 2: Sarah M">
+                    <blockquote class="testimonial-quote">
+                        <div class="testimonial-info">
+                            <h3>Sarah M,40</h3>
+                            <p>"They manage my 4 rental properties, and I've never had vacancies longer than a week. Their tenant screening is top-notch—no late payments in 3 years!"</p>
+                        </div>
+                    </blockquote>
+                </div>
+                
+                <div class="testimonial-slide" role="group" aria-label="Testimonial 3: Michael T">
+                    <blockquote class="testimonial-quote">
+                        <div class="testimonial-info">
+                            <h3>Michael T,30</h3>
+                            <p>"Followed their advice on an undervalued industrial property. Two years later, it's our most profitable asset. These guys know investments!"</p>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <button class="slider-prev" aria-label="Previous testimonial">←</button>
+                <button class="slider-next" aria-label="Next testimonial">→</button>
+            </div>
+        </div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.testimonial-slider');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    const slideWidth = slides[0].offsetWidth + 32; 
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    nextBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSlider();
+    });
+
+    prevBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSlider();
+    });
+
+    slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    slider.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(function() {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateSlider();
+        }, 5000);
+    });
+});
+</script>
+</section>
+
+ <section class="partners" id="container">
+    <div class="partner-title">
+        <h3>Our partners</h3>
+    </div>
+    <div class="partner-container">
+        <div class="partner-track">
+    <div class="partner-grid">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPz8v_OtjNzUm-jEY35itx7P_QJ8xv2WuGveQjKflvuR4FdcTg"
+        alt="partner 1" width="200" height="100">
+    </div>
+    <div class="partner-grid">
+        <img src="https://images.ctfassets.net/3xf6g0o5qdho/2VjgspmptgRyBl6TlsZeau/c2f5f586565d4665d24837b679aa6f9b/Compass-White.png"
+        alt="partner 2"  width="200" height="100"/>
+    </div>
+    <div class="partner-grid">
+        <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/vsnwi4ppyv3n8p3u9y9o"
+        alt="partner 3"  width="200" height="100"/>
+    </div>
+    <div class="partner-grid">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJ_PzaW9RX0plKpaQaoGJK49PKenR56cGXuV4w0RYVcWSpCmyg"
+        alt="partner 4"  width="200" height="100"/>
+      </div>
+      <div class="partner-grid">
+        <img src="https://images-platform.99static.com//r3TXD4uaDkcJ7k7K94fLBrrC7ys=/608x162:1246x800/fit-in/590x590/99designs-contests-attachments/103/103875/attachment_103875221"
+          alt="partner 5" width="200" height="100"/>
+    </div>
+    <div class="partner-grid">
+        <img src="https://dcassetcdn.com/design_img/76500/37897/37897_1336278_76500_image.jpg" alt="partner 6"
+        width="200" height="100"/>
+    </div>
+    </div>
+</div>
+ </section>
+  <section class="flex-section community">
+        <div class="flex-item community-info">
+            <h2>APPLY NOW</h2>
+            <p>GOOD NEWS! We are hiring new agents. If you are intrested in joining luxe dominion community you can register down below.</p>
+            <div class="btn-container">
+                <a href="#Register" class="btn">Apply</a>
+            </div>
+        </div>
+        <div class="flex-item community-image">
+            <img src="https://www.shutterstock.com/image-photo/close-happy-couple-receiving-keys-600nw-2512454355.jpg" alt="happy agents">
+        </div>
+    </section>
+<section class="questions">
+    <div class="questions-wrapper">
+        <div id="q-intro" class="flex-item">
+            <h1>Frequently<br>Asked Questions</h1>
+            <p>Here are some frequently asked questions</p>
+            <div class="q-image">
+                <img src="https://images.pexels.com/photos/2343465/pexels-photo-2343465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="House keys">
+            </div>
+        </div>
+        
+        <div class="q-container flex-item">
+            <div class="q-item">
+                <button class="q-question">1. How do I get pre-approved for a mortgage?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="q-answer">
+                    <p>Provide financial documents (pay stubs, tax returns) to a lender who'll assess your creditworthiness and loan amount.</p>
+                </div>
+            </div>
+            
+            <div class="q-item">
+                <button class="q-question">2. What's the difference between pre-qualification and pre-approval?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="q-answer">
+                    <p>Pre-qualification is an estimate; pre-approval is a lender's formal offer after verifying your finances.</p>
+                </div>
+            </div>
+            
+            <div class="q-item">
+                <button class="q-question">3. How do I price my home?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="q-answer">
+                    <p>A comparative market analysis (CMA) from your agent evaluates recent sales of similar homes.</p>
+                </div>
+            </div>
+            
+            <div class="q-item">
+                <button class="q-question">4. How do I choose the right agent?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="q-answer">
+                    <p>Look for local expertise, communication style, and client reviews.</p>
+                </div>
+            </div>
+            
+            <div class="q-item">
+                <button class="q-question">5. Can I buy/sell without an agent?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="q-answer">
+                    <p>Yes, but you'll handle negotiations, paperwork, and marketing alone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.querySelectorAll('.q-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const qItem = button.parentElement;
+        qItem.classList.toggle('active');
+        
+        const arrow = button.querySelector('.arrow');
+        if (qItem.classList.contains('active')) {
+            arrow.textContent = '×';
+        } else {
+            arrow.textContent = '+';
+        }
+    });
+});
+</script>
+</section>
+ <section class="aside">
+    <div class="aside-intro"><h1>Lets find your dream home together</h1></div>
+    <div class="aside-p"><p>Whether you’re looking to buy, sell, or invest, our team has exclusive listings and market insights to help you make the best decision.
+  </p>
+</div>
+</section>
+ <section class="contact-section">
+    <div class="contact-container">
+        <!-- Contact Information Column -->
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <p><strong>Email:</strong>luxedominion@yahoo.com</p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Phone:</strong>+1 (245) 544-5467</p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Address:</strong>Soho 23rd Street, New York, NY</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="btn-container">
+                <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+ <footer class="contact">
+    <ul class="footer-links flex-item">
+        <li><a >Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Services</a></li>
+        <li><a>Register</a></li>
+        <li><a>Facebook</a></li>
+        <li><a>Twitter</a></li>
+        <li><a>Instagram</a></li>
+        <li><a>Youtube</a></li>
+        <li><a>Tiktok</a></li>
+        <li><a>FAQ</a></li>
+        <li><a>Terms</a></li>
+        <li><a>Privacy</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+<div class="end flex-item" id="container">
+    <p><strong>Find<br> a home<br></strong></p>
+    <button type="apply" class="btn">Get a home</button>
+</div>
+ </footer>
+</body>
+</html>
